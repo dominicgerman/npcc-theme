@@ -15,8 +15,8 @@ We are still in the testing/development phase of the project. Below are links to
 
 ### Screenshots
 
-![](./images/screenshot_old.png)
-![](./images/screenshot_new.png)
+![](./images/screenshot_old.jpg)
+![](./images/screenshot_new.jpg)
 
 ## Our process
 

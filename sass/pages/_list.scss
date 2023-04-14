@@ -1,0 +1,149 @@
+.list {
+  &__content {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  & li {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  & article {
+    flex-grow: 1;
+    padding-right: 2rem;
+
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    font-family: $font-family-serif;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    font-family: $font-family-sans;
+    margin-bottom: 1.6rem;
+  }
+
+  &__links {
+    font-family: $font-family-sans;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__image-box {
+    flex-basis: 25rem;
+    height: 15rem;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+
+    padding-right: 2rem;
+
+    & a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & hr {
+    margin-bottom: 4rem;
+    border-color: $extremely-light-grey;
+  }
+
+  &__page-numbers {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.06em;
+    justify-content: center;
+    margin-bottom: 7.5rem;
+
+    & * {
+      padding: 6px;
+    }
+  }
+
+  @include respond(phone) {
+    ul {
+      max-width: 70rem;
+      margin: 0 auto;
+    }
+
+    li {
+      display: block;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    article {
+      margin: 2rem 4rem;
+      margin: 0;
+    }
+
+    h4 {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    hr {
+      margin-left: 4rem;
+      margin-right: 4rem;
+      margin-bottom: 5rem;
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    &__image-box {
+      min-height: 25rem;
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      font-size: 3.4rem;
+    }
+
+    &__date {
+      font-size: 2.4rem;
+    }
+
+    &__description {
+      font-size: 2.4rem;
+      margin-bottom: 2.6rem;
+    }
+
+    &__links {
+      font-size: 2.3rem;
+    }
+
+    &__page-numbers {
+      font-size: 3rem;
+    }
+  }
+}
+
+.current {
+  border-bottom: solid $green 3px;
+}

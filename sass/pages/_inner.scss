@@ -1,0 +1,329 @@
+//------------- INNER ---------------//
+
+.header--inner {
+  background-size: cover;
+  background-position: center;
+
+  height: 40rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 144rem;
+    flex: auto;
+  }
+
+  &__headline {
+    color: $white;
+    font-size: 5rem;
+    line-height: 6.2rem;
+    padding-bottom: 4rem;
+    max-width: 90rem;
+    margin-left: 7.7rem;
+  }
+
+  &__details {
+    color: $white;
+    font-family: $font-family-sans;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    max-width: 90rem;
+    margin-left: 7.7rem;
+  }
+
+  &__link {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  @include respond(tablet) {
+    min-height: 66rem;
+    &__banner {
+      margin: 0;
+      padding: 10rem 2rem;
+
+      p {
+        font-size: 3rem;
+        font-family: $font-family-sans;
+      }
+
+      a {
+        font-size: 2.7rem;
+      }
+    }
+
+    &__headline {
+      font-size: 5.4rem;
+      line-height: 6.6rem;
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+    }
+
+    &__details {
+      font-size: 2.6rem;
+      line-height: 3.3rem;
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+    }
+  }
+
+  @include respond(phone) {
+    min-height: 50rem;
+  }
+}
+
+.main--inner {
+  max-width: 90rem;
+  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-family: $font-family-sans;
+  margin-bottom: 20rem;
+
+  &__content {
+    > * {
+      margin-bottom: 3rem;
+    }
+
+    .contact-us__heading {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .wp-block-buttons {
+    justify-content: center;
+    font-size: 1.8rem;
+  }
+
+  .wp-block-button a {
+    height: 6rem;
+    width: 20rem;
+
+    color: $white;
+    background-color: $green;
+    font-family: $font-family-serif;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & h2 {
+    font-family: $font-family-sans;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 2.7rem;
+  }
+
+  & figure {
+    margin: 8rem auto;
+    max-width: 466px;
+    max-height: 278px;
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  & a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    text-decoration-color: $green;
+  }
+
+  & li {
+    margin-left: 6rem;
+    padding-bottom: 1.2rem;
+    list-style-type: disc;
+    &::marker {
+      color: $green;
+    }
+  }
+
+  // styles for staff bios
+  article {
+    margin-bottom: 10rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin-bottom: 3rem;
+    }
+
+    figure {
+      margin: 0;
+      max-width: 30rem;
+      max-height: 40rem;
+    }
+  }
+
+  // styles for contact forms
+  form {
+    input {
+      height: 4rem;
+      font-size: 2rem;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    textarea {
+      font-size: 2rem;
+      font-family: $font-family-sans;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include respond(tablet) {
+    &__content {
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+      font-size: 2.6rem;
+      line-height: 3.8rem;
+    }
+
+    a {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.main--event {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-family: $font-family-sans;
+  margin-bottom: 20rem;
+
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+
+  &__content {
+    flex-basis: 70rem;
+
+    > * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__img {
+    margin: 5rem auto;
+    max-width: 466px;
+    max-height: 278px;
+  }
+
+  & figure {
+    margin: 8rem auto;
+    max-width: 466px;
+    max-height: 278px;
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  &__event-box {
+    flex-basis: 35rem;
+    background-color: $light-green;
+    padding: 3.5rem;
+    padding-top: 4rem;
+    margin-bottom: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 3rem;
+    font-family: $font-family-serif;
+  }
+
+  @include respond(tablet) {
+    flex-direction: column-reverse;
+
+    &__content {
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+      font-size: 2.6rem;
+      line-height: 3.8rem;
+    }
+
+    a {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    &__event-box {
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+      padding: 5.5rem;
+      gap: 5rem;
+    }
+
+    &__button {
+      font-size: 3.3rem;
+      width: 100%;
+      height: 10rem;
+    }
+  }
+}
+
+.event-date,
+.event-time,
+.event-location {
+  h5 {
+    font-family: $font-family-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: $green;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+  }
+
+  span,
+  p {
+    font-family: $font-family-sans;
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  @include respond(tablet) {
+    h5 {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    span,
+    p {
+      font-size: 2.6rem;
+      line-height: 3.8rem;
+    }
+  }
+}
+
+.events--page__slider-heading {
+  font-size: 4.5rem;
+  text-align: center;
+}

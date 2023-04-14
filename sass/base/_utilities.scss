@@ -1,0 +1,55 @@
+.section {
+  margin-bottom: 10rem;
+}
+
+.slider {
+  display: flex;
+  font-family: $font-family-serif;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  // Hide Scrollbar
+  -ms-overflow-style: none; //Edge
+  scrollbar-width: none; //Firefox
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Opera, Safari
+  }
+}
+
+.purple {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $purple;
+}
+
+.green {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $green;
+}
+
+.white-gold {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $yellow;
+}
+
+.red {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $red;
+}
+
+.black {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: $black;
+}

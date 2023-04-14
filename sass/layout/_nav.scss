@@ -1,0 +1,258 @@
+////////////////////  TOGGLE  /////////////////////
+
+.toggle {
+  &__open,
+  &__close,
+  &__checkbox {
+    display: none;
+  }
+
+  @include respond(tablet) {
+    &__open,
+    &__close,
+    &__checkbox {
+      width: 28px;
+      height: 28px;
+
+      right: 7rem;
+    }
+
+    &__open {
+      display: block;
+      position: absolute;
+    }
+
+    &__close {
+      position: fixed;
+      z-index: 10;
+    }
+
+    &__checkbox {
+      opacity: 0;
+      z-index: 20;
+
+      display: block;
+      position: fixed;
+
+      &:checked {
+        & ~ .nav__overlay {
+          display: block;
+        }
+
+        & ~ .nav__list {
+          display: block;
+          pointer-events: auto;
+        }
+
+        & ~ .toggle__close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__open,
+    &__close,
+    &__checkbox {
+      right: 2rem;
+    }
+  }
+}
+
+/////////////////////  CHEVRON  ////////////////////////
+
+.chevron {
+  &__down,
+  &__checkbox {
+    display: none;
+  }
+  @include respond(tablet) {
+    &__checkbox {
+      display: unset;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      justify-self: baseline;
+
+      opacity: 0;
+      z-index: 20;
+      height: 28px;
+      width: 28px;
+      pointer-events: auto;
+
+      &:checked ~ .chevron__down {
+        transform: rotate(180deg);
+        transition: 100ms linear all;
+      }
+
+      &:checked ~ .nav__submenu {
+        display: block;
+        position: static;
+        background-color: rgba(255, 0, 0, 0.2);
+        width: auto;
+
+        li {
+          font-size: 20px;
+        }
+      }
+    }
+    &__down {
+      display: unset;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      justify-self: baseline;
+      transition: 100ms linear all;
+
+      margin-left: 10px;
+    }
+  }
+}
+
+/////////////////////  NAV  ////////////////////////
+
+.nav {
+  &__content {
+    height: 10rem;
+    max-width: 144rem;
+    margin: 0 auto;
+
+    background-color: $white;
+    font-family: $font-family-serif;
+    line-height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-left: 7.1rem;
+    margin-right: 2rem;
+    font-size: 3rem;
+    line-height: 3.7rem;
+  }
+
+  &__logo img {
+    height: 6rem;
+    width: 7.5rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 64rem;
+    font-size: 2rem;
+    margin-right: 8rem;
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    position: relative;
+    padding-bottom: 1rem;
+
+    @media (min-width: 75em) {
+      &:hover .nav__submenu {
+        display: block;
+      }
+    }
+  }
+
+  &__link--active {
+    text-decoration: underline;
+    text-decoration-color: $green;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1rem;
+  }
+
+  &__submenu {
+    display: none;
+    position: absolute;
+    top: 2.6rem;
+    width: 14.2rem;
+    text-align: center;
+    background-color: $white;
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.15);
+    border-bottom: solid 3px $green;
+    z-index: 10;
+
+    & li {
+      font-size: 1.6rem;
+      padding: 0.8rem;
+    }
+  }
+
+  @include respond(tablet) {
+    &__list {
+      display: none;
+      position: fixed;
+      top: 0%;
+      background-color: $green;
+      width: 100%;
+      height: 100vh;
+      z-index: 5;
+
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+
+      overflow: scroll;
+      pointer-events: none;
+      color: $white;
+    }
+
+    &__link {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: auto auto;
+      font-size: 5.3rem;
+      line-height: 13rem;
+
+      &--text {
+        grid-column: 1;
+        justify-self: end;
+        margin-left: 38px;
+      }
+      &:nth-child(n + 5) a {
+        margin-left: 0;
+      }
+    }
+
+    &__submenu {
+      grid-row: 2;
+      grid-column: span 2;
+      line-height: 5rem;
+      margin-left: 10px;
+      background-color: $green;
+      box-shadow: none;
+      border-bottom: none;
+
+      li {
+        background-color: $green;
+      }
+    }
+
+    &__link--active {
+      text-decoration-color: rgba($white, 0.5);
+    }
+  }
+
+  @include respond(phone) {
+    &__logo {
+      margin-left: 2rem;
+    }
+
+    &__link--active {
+      text-underline-offset: 2rem;
+    }
+  }
+}

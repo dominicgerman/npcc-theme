@@ -1,0 +1,30 @@
+//  MEDIA QUERIES  //
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    //600px
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  // @if $breakpoint == layout {
+  //   //800px
+  //   @media (max-width: 50em) {
+  //     @content;
+  //   }
+  // }
+
+  @if $breakpoint == tablet {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+}

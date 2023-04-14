@@ -1,0 +1,24 @@
+$font-family-serif: 'Marcellus', serif;
+$font-family-sans: 'Montserrat', sans-serif;
+
+$green: rgb(1, 137, 1);
+$light-green: rgba(1, 137, 1, 0.1);
+$dark-green: rgb(0, 43, 0);
+$white: rgb(255, 255, 255);
+$grey: hsl(0, 0%, 27%);
+$light-grey: hsla(0, 0%, 27%, 0.7);
+$lighter-grey: hsla(0, 0%, 27%, 0.28);
+$very-light-grey: hsla(60, 8%, 95%, 1);
+$extremely-light-grey: rgba(239, 239, 239, 1);
+$purple: hsla(281, 91%, 34%, 1);
+$light-purple: hsla(281, 92%, 34%, 0.1);
+$yellow: hsla(51, 100%, 50%, 1);
+$light-yellow: linear-gradient(
+  142.56deg,
+  rgba(255, 255, 255, 0.1) 25.38%,
+  rgba(255, 216, 0, 0.1) 97.36%
+);
+$red: rgb(242, 58, 58);
+$light-red: hsl(0, 88%, 59%, 0.1);
+$black: rgb(17, 24, 39);
+$beige: rgba(129, 121, 51, 0.05);

@@ -1,0 +1,83 @@
+.card {
+  margin-left: 4.5rem;
+  margin-right: 3.4rem;
+
+  & p {
+    font-family: $font-family-sans;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+.card--purple {
+  background-color: $light-purple;
+
+  & a {
+    text-decoration-color: $purple;
+  }
+
+  & .services__link {
+    color: $purple;
+  }
+
+  & svg path {
+    fill: $purple;
+  }
+}
+
+.card--green {
+  background-color: $light-green;
+
+  & a {
+    text-decoration-color: $green;
+  }
+
+  & .services__link {
+    color: $green;
+  }
+
+  & svg path {
+    fill: $green;
+  }
+}
+
+.card--red {
+  background-color: $light-red;
+
+  & a {
+    text-decoration-color: $red;
+  }
+
+  & .services__link {
+    color: $red;
+  }
+
+  & svg path {
+    fill: $red;
+  }
+}
+
+.card--white-gold {
+  background: $light-yellow;
+  border: 1px solid $yellow;
+
+  & a {
+    text-decoration-color: $yellow;
+  }
+
+  & svg path {
+    fill: $grey;
+  }
+}
+
+.card--black {
+  background: rgba($black, 0.1);
+
+  & a {
+    text-decoration-color: $black;
+  }
+
+  & svg path {
+    fill: $grey;
+  }
+}

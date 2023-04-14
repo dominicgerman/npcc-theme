@@ -1,0 +1,23 @@
+/*
+ Theme Name: North Park Covenant Theme
+ Author: Dominic
+ Version: 1.0
+*/
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+@import 'components/card';
+@import 'components/dots';
+
+@import 'layout/footer';
+@import 'layout/nav';
+
+@import 'pages/home';
+@import 'pages/inner';
+@import 'pages/list';

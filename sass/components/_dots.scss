@@ -1,0 +1,35 @@
+.dots {
+  width: 2.4rem;
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  background-color: $lighter-grey;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 1000px;
+}
+
+.dot--active {
+  background-color: $grey;
+}
+
+@include respond(tablet) {
+  .dots {
+    display: flex;
+    width: 100%;
+    top: 104%;
+    justify-content: center;
+    gap: 1.3rem;
+  }
+
+  .dot {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}

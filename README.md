@@ -15,7 +15,10 @@ We are still in the testing/development phase of the project. Below are links to
 
 ### Screenshots
 
+#### Old Site
 ![](./images/screenshot_old.jpg)
+
+#### New site
 ![](./images/screenshot_new.jpg)
 
 ## Our process

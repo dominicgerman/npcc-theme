@@ -25,7 +25,7 @@
                 <rect y="7" width="42" height="2" fill="#444444" />
                 <rect y="14" width="42" height="2" fill="#444444" />
             </svg>
-            <input class="toggle__checkbox" type="checkbox" />
+            <input class="toggle__checkbox" type="checkbox" autocomplete="off" />
             <svg class="toggle__close" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.443848" y="30.1421" width="42" height="2" transform="rotate(-45 0.443848 30.1421)" fill="white" />
                 <rect x="1.85791" y="0.443604" width="42" height="2" transform="rotate(45 1.85791 0.443604)" fill="white" />

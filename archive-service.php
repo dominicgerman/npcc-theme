@@ -24,7 +24,7 @@ get_header();
             <ul>
 
                 <?php
-                $inc = 1;
+                $today = date('Ymd');
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
                     'posts_per_page' => 10,
@@ -32,7 +32,15 @@ get_header();
                     'meta_key' => 'service_date',
                     'orderby' => 'meta_value',
                     'order' => 'DES',
-                    'paged' => $paged
+                    'paged' => $paged,
+                    'meta_query' => array(
+                        array(
+                            'key' => 'service_date',
+                            'value' => $today,
+                            'compare' => '<=',
+                            'type' => 'DATE'
+                        )
+                    )
                 );
                 $loop = new WP_Query($args);
                 if ($loop->have_posts()) :
@@ -46,44 +54,40 @@ get_header();
                         $vimeoLink = get_field('vimeo_link');
                         $serviceImage = get_field('service_image');
 
-                        if ($inc == 1) {
-                        } else {
-
                 ?>
-                            <li>
-                                <div class="list__image-box" style="background-image: url('<?php
-                                                                                            if (has_post_thumbnail()) {
-                                                                                                the_post_thumbnail_url();
-                                                                                            } else {
-                                                                                                echo get_theme_file_uri('/images/spotlight.jpg');
-                                                                                            }
-                                                                                            ?>');">
-                                    <a href="<?php echo $vimeoLink; ?>">
-                                    </a>
+                        <li>
+                            <div class="list__image-box" style="background-image: url('<?php
+                                                                                        if (has_post_thumbnail()) {
+                                                                                            the_post_thumbnail_url();
+                                                                                        } else {
+                                                                                            echo get_theme_file_uri('/images/spotlight.jpg');
+                                                                                        }
+                                                                                        ?>');">
+                                <a href="<?php echo $vimeoLink; ?>">
+                                </a>
+                            </div>
+                            <article>
+                                <h4>
+                                    <a href="<?php echo $vimeoLink ?>" target="_blank" class="list__title <?php echo $serviceColor ?>"><?php the_title(); ?></a>
+                                    <span class="list__date"><?php echo $serviceDate->format('D, M jS'); ?></span>
+                                </h4>
+                                <p class="list__description">
+                                    <?php if (has_excerpt()) {
+                                        echo wp_trim_words(get_the_excerpt(), 40);
+                                    } else {
+                                        echo wp_trim_words(get_the_content(), 40);
+                                    }  ?>
+                                </p>
+                                <div class="list__links">
+                                    <a href="<?php echo $lectionaryTexts ?>" target="_blank" class="">View Lectionary Text</a>
+                                    |
+                                    <a href="<?php echo $bulletinLink ?>" target="_blank" class="">View the Bulletin</a>
                                 </div>
-                                <article>
-                                    <h4>
-                                        <a href="<?php echo $vimeoLink ?>" target="_blank" class="list__title <?php echo $serviceColor ?>"><?php the_title(); ?></a>
-                                        <span class="list__date"><?php echo $serviceDate->format('D, M jS'); ?></span>
-                                    </h4>
-                                    <p class="list__description">
-                                        <?php if (has_excerpt()) {
-                                            echo wp_trim_words(get_the_excerpt(), 40);
-                                        } else {
-                                            echo wp_trim_words(get_the_content(), 40);
-                                        }  ?>
-                                    </p>
-                                    <div class="list__links">
-                                        <a href="<?php echo $lectionaryTexts ?>" target="_blank" class="">View Lectionary Text</a>
-                                        |
-                                        <a href="<?php echo $bulletinLink ?>" target="_blank" class="">View the Bulletin</a>
-                                    </div>
-                                </article>
-                            </li>
-                            <hr />
+                            </article>
+                        </li>
+                        <hr />
                 <?php
-                        }
-                        $inc++; // increment counter
+
                     endwhile;
                 endif;
                 ?>

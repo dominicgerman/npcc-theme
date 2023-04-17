@@ -51,6 +51,7 @@ if (have_posts()) :
                         <h5>Date</h5>
                         <span><?php echo $eventDate->format('D, M dS'); ?></span>
                     </div>
+
                     <? if ($eventTime) {
                     ?>
                         <div class="event-time">
@@ -58,16 +59,19 @@ if (have_posts()) :
                             <span><?php echo $eventTime; ?></span>
                         </div>
                     <?  }
-                    ?>
-                    <? if ($eventLocation) {
+
+                    if ($eventLocation) {
                     ?>
                         <div class="event-location">
                             <h5>Location</h5>
                             <?php echo $eventLocation ?>
                         </div>
                     <?  }
+
+                    if ($rsvpLink) {
                     ?>
-                    <a href="<?php echo $rsvpLink ?>" class="btn main--event__button">RSVP Now</a>
+                        <a href="<?php echo $rsvpLink ?>" class="btn main--event__button">RSVP Now</a>
+                    <? } ?>
                 </aside>
             </section>
             <section class="section events">

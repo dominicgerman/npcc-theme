@@ -1,0 +1,72 @@
+.wpcf7 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: $font-family-serif;
+
+  form {
+    width: 72rem;
+
+    .contact-form-label {
+      margin-bottom: 10px;
+    }
+
+    br {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .name_email--wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 35rem;
+      }
+    }
+
+    input {
+      height: 60px;
+      line-height: 2.5rem;
+      padding: 1rem;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    textarea {
+      width: 72rem;
+      line-height: 2.5rem;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .submit_button_p {
+      text-align: -webkit-right;
+    }
+
+    .wpcf7-submit {
+      width: 200px;
+    }
+  }
+
+  @include respond(phone) {
+    form {
+      width: 350px;
+      font-size: 3.3rem;
+
+      .name_email--wrapper {
+        display: unset;
+        input {
+          width: 350px;
+        }
+      }
+
+      textarea {
+        width: 350px;
+      }
+    }
+  }
+}

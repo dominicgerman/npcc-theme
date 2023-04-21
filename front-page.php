@@ -46,14 +46,14 @@ $heroContent = $heroPost->post_content;
                     <li class="card--<?php echo $serviceColor ?>">
 
                         <div style="background-image: url('<?php echo get_theme_file_uri('/images/service-card.jpg') ?>');" class="current-service-img" alt="bible">
-                            <a href="https://live.npcovenant.org">
+                            <a href="https://live.npcovenant.org" aria-label="View the worship livestream">
                             </a>
                         </div>
                         <article class="card">
-                            <h4>
+                            <h3>
                                 <span class="services__date"><?php echo $serviceDate->format('D, M jS'); ?></span>
                                 <a href="https://live.npcovenant.org" target="_blank" class="services__title"><?php the_title() ?></a>
-                            </h4>
+                            </h3>
                             <p>
                                 <?php if (has_excerpt()) {
                                     echo wp_trim_words(get_the_excerpt(), 28);

@@ -41,6 +41,22 @@
   }
 }
 
+.card--blue {
+  background-color: $light-blue;
+
+  & a {
+    text-decoration-color: $blue;
+  }
+
+  & .services__link {
+    color: $blue;
+  }
+
+  & svg path {
+    fill: $blue;
+  }
+}
+
 .card--red {
   background-color: $light-red;
 

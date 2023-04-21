@@ -36,30 +36,31 @@ function eventSlider()
                     $eventTitleString = strip_tags(get_the_title());
             ?>
                     <li class="event card--grey">
-                        <div class="events__image" style="background-image: url('<?php if (has_post_thumbnail()) {
-                                                                                        the_post_thumbnail_url();
-                                                                                    } else {
-                                                                                        echo get_theme_file_uri('/images/service-card.jpg');
-                                                                                    }  ?>');">
-                            <a href="<?php the_permalink(); ?>" />
+                        <a href="<?php the_permalink(); ?>" aria-label="View this event">
+                            <div class="events__image" style="background-image: url('<?php if (has_post_thumbnail()) {
+                                                                                            the_post_thumbnail_url();
+                                                                                        } else {
+                                                                                            echo get_theme_file_uri('/images/service-card.jpg');
+                                                                                        }  ?>');">
 
-                        </div>
+                            </div>
+                        </a>
                         <article class="card">
-                            <h4>
-                                <a href="<?php the_permalink(); ?>" class="events__title"> <?php if (strlen($eventTitleString) > 27) {
-                                                                                                echo substr($eventTitleString, 0, 27);
-                                                                                                echo '...';
-                                                                                            } else {
-                                                                                                echo get_the_title();
-                                                                                            } ?>
+                            <h3 class="events__header">
+                                <a href="<?php the_permalink(); ?>" class="events__title" aria-label="View this event"> <?php if (strlen($eventTitleString) > 27) {
+                                                                                                                            echo substr($eventTitleString, 0, 27);
+                                                                                                                            echo '...';
+                                                                                                                        } else {
+                                                                                                                            echo get_the_title();
+                                                                                                                        } ?>
                                 </a>
                                 <span class="events__date"><?php echo $eventDate->format('D, M dS'); ?></span>
-                            </h4>
+                            </h3>
                             <p>
                                 <?php echo wp_trim_words(get_the_content(), 30); ?>
                             </p>
                         </article>
-                        <a href="<?php the_permalink(); ?>" target="_blank" class="events__link">View details
+                        <a href="<?php the_permalink(); ?>" target="_blank" class="events__link" aria-label="View this event">View details
                             <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.35 6.15L12.35 0.15C12.16 -0.05 11.84 -0.05 11.64 0.15C11.44 0.34 11.44 0.66 11.64 0.86L16.79 6.01H0.5C0.22 6.01 0 6.23 0 6.51C0 6.79 0.22 7.01 0.5 7.01H16.79L11.64 12.16C11.44 12.36 11.44 12.67 11.64 12.87C11.74 12.97 11.87 13.02 11.99 13.02C12.11 13.02 12.25 12.97 12.34 12.87L18.34 6.87C18.53 6.68 18.53 6.36 18.34 6.16L18.35 6.15Z" fill="" />
                             </svg></a>

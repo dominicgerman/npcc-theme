@@ -10,7 +10,7 @@ $todaysYear = date('Y');
             <img src=<?php echo get_theme_file_uri('/images/footer-logo.png') ?> alt="logo" />
         </div>
         <?php echo $footerContent; ?>
-        <ul class="footer__socials">
+        <div class="footer__socials">
             <a href="https://www.facebook.com/npcovenant" target="_blank">
                 <img src=<?php echo get_theme_file_uri('/images/facebook.png') ?> alt="facebook" />
             </a>
@@ -20,7 +20,7 @@ $todaysYear = date('Y');
             <a href="https://vimeo.com/npcovenant" target="_blank">
                 <img src=<?php echo get_theme_file_uri('/images/vimeo.png') ?> alt="vimeo" />
             </a>
-        </ul>
+        </div>
     </div>
     <div class="footer__info">
         <span class="address"> 5250 N Christiana Ave, Chicago, IL 60625 </span>

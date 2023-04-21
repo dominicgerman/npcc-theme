@@ -1,0 +1,160 @@
+//------------- SERVICES ---------------//
+
+.services {
+  &__slider {
+    height: 38rem;
+    margin: 10rem 0 10rem 7.7rem;
+    gap: 4rem;
+
+    & li:first-of-type {
+      flex: 0 0 65.5rem;
+
+      & .services__link {
+        display: inline-block;
+        background-color: $green;
+        color: $white !important;
+        padding: 1rem 1.5rem;
+        margin-top: 2rem;
+
+        & svg path {
+          fill: $white !important;
+        }
+      }
+    }
+
+    & li:last-of-type {
+      background-color: $white;
+      color: $green;
+      flex: 0 0 14.6rem;
+      margin-right: 7.7rem;
+      font-size: 2rem;
+
+      & svg path {
+        fill: $green;
+      }
+    }
+  }
+
+  &__slider li {
+    flex: 1 0 38rem;
+
+    display: flex;
+    align-items: center;
+
+    scroll-snap-align: center;
+
+    h4 {
+      line-height: 4.4rem;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 3.2rem;
+    margin-top: 1.2rem;
+
+    font-size: 3rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+  }
+
+  &__date {
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+  }
+
+  & p {
+    margin-bottom: 2.2rem;
+  }
+
+  &__link {
+    font-size: 2rem;
+  }
+
+  @include respond(phone) {
+    &__slider {
+      display: block;
+      height: 100rem;
+      margin: 4rem;
+      overflow: hidden;
+
+      & li {
+        display: none;
+      }
+
+      & li:first-of-type {
+        display: flex;
+        flex-direction: column;
+
+        article {
+          padding-top: 4rem;
+          padding-bottom: 4.5rem;
+        }
+
+        .services__title {
+          text-underline-offset: 2rem;
+        }
+
+        .services__link {
+          padding: 2rem;
+          border-radius: 3px;
+
+          svg {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      & li:last-of-type {
+        display: block;
+        font-size: 4rem;
+        color: $grey;
+        margin: 10rem;
+        text-align: center;
+
+        & svg {
+          margin-left: 1rem;
+          path {
+            fill: $grey;
+          }
+        }
+      }
+    }
+    &__title {
+      font-size: 4rem;
+      padding-top: 2rem;
+    }
+
+    &__date {
+      font-size: 2.7rem;
+      padding-top: 2rem;
+    }
+
+    & p {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      padding-top: 2rem;
+    }
+
+    &__link {
+      font-size: 2.7rem;
+    }
+  }
+}
+
+.current-service-img {
+  flex: 1 0 27.5rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}

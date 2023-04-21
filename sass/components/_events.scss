@@ -1,0 +1,160 @@
+//------------- EVENTS ---------------//
+
+.events {
+  position: relative;
+  margin-bottom: 20rem;
+
+  &__content {
+    max-width: 144rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__slider {
+    max-width: 100%;
+    margin: 10rem 7.7rem 5rem 7.7rem;
+
+    align-items: center;
+    gap: 3.8rem;
+  }
+
+  &__slider li {
+    flex: 1 0 40.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    background-color: $very-light-grey;
+
+    margin-bottom: 3rem;
+
+    scroll-snap-align: start;
+
+    & article {
+      min-height: 13.3rem;
+    }
+  }
+
+  &__header {
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    display: block;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    margin-bottom: 3px;
+    margin-top: 2.9rem;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+  }
+
+  &__image {
+    height: 21.8rem;
+    width: 40.3rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  & p {
+    margin-bottom: 1.4rem;
+    max-width: 32rem;
+    min-height: 8.6rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.8rem;
+    background-color: $light-grey;
+    color: $white;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    &:hover {
+      background-color: $grey;
+    }
+
+    & svg {
+      padding-left: 0.6rem;
+
+      & path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 25rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 30rem;
+
+    button {
+      display: none;
+    }
+
+    &__content {
+      margin-bottom: 10rem;
+    }
+
+    &__slider {
+      margin: 0 4rem;
+    }
+
+    &__image {
+      width: 100%;
+      height: 26rem;
+    }
+    &__slider li {
+      flex: 1 0 100%;
+
+      article {
+        min-height: 21.7rem;
+        a {
+          font-size: 3.4rem;
+          margin-bottom: 2.7rem;
+        }
+
+        span {
+          font-size: 2rem;
+        }
+
+        h4 {
+          margin-bottom: 2.7rem;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 2.6rem;
+          max-width: 100%;
+          padding-bottom: 2.7rem;
+          min-height: 15.7rem;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 2.7rem;
+      height: 8rem;
+    }
+
+    &__button {
+      font-size: 3.4rem;
+      height: 10rem;
+      width: 42rem;
+      border-radius: 4px;
+    }
+  }
+}

@@ -50,10 +50,10 @@ $heroContent = $heroPost->post_content;
                             </a>
                         </div>
                         <article class="card">
-                            <h3>
+                            <h4>
                                 <span class="services__date"><?php echo $serviceDate->format('D, M jS'); ?></span>
                                 <a href="https://live.npcovenant.org" target="_blank" class="services__title"><?php the_title() ?></a>
-                            </h3>
+                            </h4>
                             <p>
                                 <?php if (has_excerpt()) {
                                     echo wp_trim_words(get_the_excerpt(), 28);

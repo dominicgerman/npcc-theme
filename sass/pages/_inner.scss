@@ -169,6 +169,20 @@
       max-height: 40rem;
     }
   }
+
+  @include respond(tablet) {
+    &__content {
+      margin-left: 5.5rem;
+      margin-right: 5.5rem;
+      font-size: 2.6rem;
+      line-height: 3.8rem;
+    }
+
+    a {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
 }
 
 .main--event {

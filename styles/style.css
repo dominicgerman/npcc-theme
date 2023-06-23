@@ -1284,8 +1284,6 @@ footer {
 }
 .main--inner figure {
   margin: 8rem auto;
-  max-width: 466px;
-  max-height: 278px;
   overflow: hidden;
 }
 .main--inner img {
